@@ -6,6 +6,11 @@
 --hover-color: #0606bd;
 --background-color-section-our-team: #f4f4fd;
 --background-white-color: #fff;
+--background-icon-list: #f4f4fd;
+--icons-color: #8e8f99;
+--icons-hover-color: #ffffff;
+--background-icons-color: #4d5ae5;
+--title-customer-color: #2e2f42;
 --heading-font-family: "Raleway",
     sans-serif;
 --text-font-family: "Roboto",
@@ -151,7 +156,7 @@ ul {
 .btn-service:focus {
     background-color: var(--button-background-color);
 }
-/* Information about What are We Doing */
+/* Information about Information about feature list  */
 .feature-title {
     font-weight: 500;
     font-size: 20px;
@@ -163,11 +168,23 @@ ul {
     line-height: 1.5em;
 }
 
-
 .feature-list {
     display: flex;
     gap: 24px;
     padding: 100px 70px;
+}
+.icon-list-benefits {
+    display: flex;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    align-items: center;
+    background: var(--background-icon-list);
+    border-radius: 4px;
+}
+.icon-benefits {
+    width: 64px;
+    height: 64px;
 }
 /* Information about What are we doing Section */
 .section-what-we-doing {
@@ -234,6 +251,51 @@ ul {
     background-color: var(--background-white-color);
 }
 
+.icons-list-our-team {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.icons-list-our-team .icons-our-team svg {
+    width: 16px;
+    height: 16px;
+}
+
+.icons-list-our-team .icons-our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    fill: var(--icons-color);
+    margin-bottom: 25px;
+
+}
+.icons-list-our-team .icons-our-team:hover
+ {
+    background-color: var(--background-icons-color);
+    border-radius: 50%;
+    fill: var(--icons-hover-color);   
+}
+.icons-list-our-team .icons-our-team:focus {
+    background-color: var(--background-icons-color);
+    border-radius: 50%;
+    fill: var(--icons-hover-color);
+}
+
+/* Information about Section Customers */
+
+.icon-customer {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
 /* Information about footer section */
 .footer-section {
     display: flex;
@@ -267,4 +329,45 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--background-white-color);
+}
+.social-media-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+.icons-social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.icons-social-media .icons-our-team svg {
+    width: 20px;
+    height: 20px;
+}
+
+.icons-social-media .icons-our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    fill: var(--icons-color);
+
+}
+
+.icons-social-media .icons-our-team:hover {
+    background-color: var(--background-icons-color);
+    border-radius: 50%;
+    fill: var(--icons-hover-color);
+}
+
+.icons-social-media .icons-our-team:focus {
+    background-color: var(--background-icons-color);
+    border-radius: 50%;
+    fill: var(--icons-hover-color);
 }
