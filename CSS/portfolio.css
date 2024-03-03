@@ -1,208 +1,269 @@
 :root {
-    --primary-color: #434455;
-    --secondary-color: #2e2f42;
     --button-background-color: #4d5ae5;
-    --visited-links: #b900b9;
-    --hover-color: #0606bd;
-    --background-white-color: #fff;
-    --footer-section-color: #2e2f42;
+    --button-color: #404bbf;
+    --primary-color: #2e2f42;
+    --logo-color: #4d5ae5;
+    --hover-links-color: #2042db;
+    --slate: #434455;
+    --social-icon-color: #8e8f99;
     --border-color: #e7e9fc;
-    --heading-font-family: "Raleway",
-        sans-serif;
-    --text-font-family: "Roboto",
-        sans-serif;
+    --cloud: #f4f4fd;
+    --primary-color-modal: rgba(46, 47, 66, 0.4);
+    --grey: rgba(46, 47, 66, 0.702);
+    --color-white: #fff;
+    --dairy: #fcfcfc;
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Raleway", sans-serif;
 }
-/* Information about font color and font family */
-* {
-    body {
-        font-family: var(--text-font-family);
-        color: var(--primary-color);
-    }
-}
-ul {
-    list-style-type: none;
-}
+
 /* General settings */
-.global-header .main-nav a {
+body {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+a {
     text-decoration: none;
 }
+
+li {
+    list-style-type: none;
+}
+
 .container {
     width: 1200px;
+    margin: 0 auto;
 }
 
 .section {
-    display: flex;
-    justify-content: center;
+    padding: 94px 0;
 }
 
-.container-nav-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.link-color {
-    display: flex;
-    justify-content: space-evenly;
-    width: 500px;
+/* Information about Top Line */
+.top-line {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 24px 0;
 }
 
-/* Information about Logo */
-.logo::before {
-    content: "WEB";
-    color: var(--button-background-color);
-    font-family: var(--heading-font-family);
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.16667;
+.top-line-style {
+    display: flex;
+    justify-content: space-between;
 }
-.atribut-logo {
-    font-family: var(--heading-font-family);
+
+/* Information about logo */
+.logo {
+    font-family: var(--second-family);
     font-weight: 800;
     font-size: 18px;
     line-height: 1.16667;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--secondary-color);
-}
-.logo,
-.atribut-logo a {
-    text-decoration: none;
+    color: var(--logo-color);
 }
 
-/* Information about links */
-.global-header .link-color a {
+.logo::after {
+    content: "STUDIO";
+    color: var(--primary-color);
+}
+
+/* Information about Nav Bar */
+.navbar-list {
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+}
+
+.navbar-list-item {
+    font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--secondary-color);
-}
-.link-color a:visited {
-    color: var(--visited-links);
-}
-/* Information about contacts data */
-.mail {
-    font-size: 16px;
-    line-height: 1.5em;
-    text-decoration: none;
+    letter-spacing: 0.02em;
     color: var(--primary-color);
 }
 
-.mail:hover,
-.mail:focus {
-    color: var(--hover-color);
+.navbar-list-item:hover {
+    color: var(--hover-links-color);
 }
 
-.tel {
+/* Information about Contacts in Nav-Bar */
+.contact {
+    font-family: var(--font-family);
+    font-weight: 400;
     font-size: 16px;
-    line-height: 1.5em;
-    text-decoration: none;
-    color: var(--primary-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: flex;
+    gap: 40px;
+    margin-left: 100px;
 }
 
-.tel:hover,
-.tel:focus {
-    color: var(--hover-color);
+.contact a {
+    color: var(--slate);
 }
 
-/* Information about buttons style */
-.button-list {
+.contact a:hover {
+    color: var(--hover-links-color);
+}
+
+/* Information about buttons with filtres */
+.filters-section {
+    padding-top: 94px;
+}
+
+.filters-section-list {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    align-items: center;
+    gap: 40px;
+    white-space: nowrap;
 }
-.btn-filter {
-    border: 1px solid #e7e9fc;
-    border-radius: 4px;
+
+.btn-filtres {
     padding: 12px 24px;
-    width: 116px;
-    height: 48px;
-    background-color: var(--background-white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--cloud);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
     color: var(--button-background-color);
+}
+
+.btn-filtres:hover {
+    color: var(--color-white);
+    background: var(--button-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    scale: 1.015;
     cursor: pointer;
 }
-.btn-filter:hover {
-    background-color: var(--button-background-color);
-    color: var(--background-white-color);
-}
-.btn-filter:focus {
-    background-color: var(--button-background-color);
-    color: var(--background-white-color);
-    outline-color: transparent;
+
+/* Information about Rows */
+.section-row-list {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Information about Cards */
-.project-card-list {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 20px;
-}
 .project-card {
-    width: 360px;
-    height: 420px;
-    background: var(--background-white-color);
-    border: 1px solid #e7e9fc;
-    
+    border: 1px solid var(--border-color);
+    background: var(--color-white);
 }
 
-/* Information about card contents */
-.card-content {
+.project-card:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    scale: 1.015;
+}
+
+.project-card-info {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0 32px 16px;
+}
+
+.project-card-info h2 {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2em;
+    line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--secondary-color);
-    padding-left: 16px;
-
+    color: var(--primary-color);
 }
-.card-content-information {
+
+.project-card-info span {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-left: 16px;
+    color: var(--slate);
 }
 
-/* About footer section */
-
-
-.footer-section-portfolio {
-    display: flex;
-    background-color: var(--secondary-color);
-    justify-content: center;
-    height: 300px;
-    padding-left: 100px;
-    align-items: center;
-    margin-top: 100px;
+/* Information about Footer section */
+.footer-section {
+    background: var(--primary-color);
+    padding: 100px 0;
 }
-/* Information about logo in footer */
-.footer-logo::after{
-    content: "STUDIO";
-    color: var(--background-white-color);
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.16667;
-}
-.footer-logo-studio {
-    font-family: var(--heading-font-family);
+
+/* Information about Footer Logo */
+.footer-logo {
+    font-family: var(--second-family);
     font-weight: 800;
     font-size: 18px;
     line-height: 1.16667;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--background-white-color);
+    color: var(--logo-color);
 }
 
-/* Information about footer desscription */
-.footer-description {
+.footer-logo::after {
+    content: "STUDIO";
+    color: var(--cloud);
+}
+
+.footer-section-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 264px;
+}
+
+.footer-section-logo p {
+    font-family: var(--font-family);
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--background-white-color);
+    color: var(--cloud);
 }
 
+/* Information about style footer */
+.footer-section-style {
+    display: flex;
+    gap: 120px;
+}
+
+/* Information about Social links */
+.footer-social-links {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-social-links-list {
+    display: flex;
+    justify-content: space-between;
+    width: 208px;
+}
+
+/* Information about Footer svg */
+.footer-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--social-icon-color);
+}
+
+.footer-icon svg:hover,
+.footer-icon svg:active {
+    fill: var(--color-white);
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon:hover,
+.footer-icon:active {
+    background: var(--logo-color);
+    border-radius: 50%;
+    fill: var(--color-white);
+}
