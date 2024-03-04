@@ -44,6 +44,8 @@ li {
     background: var(--color-white);
     border-bottom: 1px solid var(--border-color);
     padding: 24px 0;
+    display: flex;
+    align-items: center;
 }
 
 .top-line-style {
